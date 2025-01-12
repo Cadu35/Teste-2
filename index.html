@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial</title>
     <style>
+        /* Estilos globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -12,19 +19,27 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            margin: 0;
-            text-align: center;
             background-color: #f9f9f9;
+            text-align: center;
+            color: #333;
         }
 
         h1 {
-            margin-bottom: 20px;
+            margin-bottom: 1.5em;
+            font-size: 2em;
         }
 
+        /* Container para imagens */
         .images {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            flex-wrap: wrap;
+            gap: 1.5em;
+            padding: 1em;
+        }
+
+        .images a {
+            text-decoration: none;
         }
 
         .images a img {
@@ -32,21 +47,47 @@
             height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .images a img:hover {
             transform: scale(1.1);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
+
+        /* Rodapé */
+        footer {
+            margin-top: 2em;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        footer a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #004099;
+        }
     </style>
 </head>
 <body>
     <h1>Escolha uma classe</h1>
     <div class="images">
-        <a href="guia1.html"><img src="cordas.jpg" alt="Cordas"></a>
-        <a href="guia2.html"><img src="metais.jpg" alt="Metais"></a>
-        <a href="guia3.html"><img src="madeiras.jpg" alt="Madeiras"></a>
+        <a href="guia1.html">
+            <img src="cordas.jpg" alt="Imagem representando instrumentos de cordas">
+        </a>
+        <a href="guia2.html">
+            <img src="metais.jpg" alt="Imagem representando instrumentos de metais">
+        </a>
+        <a href="guia3.html">
+            <img src="madeiras.jpg" alt="Imagem representando instrumentos de madeiras">
+        </a>
     </div>
+    <footer>
+        <p>Desenvolvido por <a href="#">Seu Nome</a> - 2025</p>
+    </footer>
 </body>
 </html>
